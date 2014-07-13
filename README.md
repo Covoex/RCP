@@ -1,5 +1,5 @@
 RCP Project
-======================================
-Java Rock Scissor Paper Game 
+===
+Java Rock Scissors Paper Game 
 
-HyunjaeLee
+_by HyunjaeLee_
