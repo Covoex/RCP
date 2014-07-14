@@ -2,4 +2,4 @@ RCP Project
 ===
 Java Rock Scissors Paper Game 
 
-_by HyunjaeLee_
+_Copyright © 2014 HyunjaeLee All rights reserved._
