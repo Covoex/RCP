@@ -30,7 +30,7 @@ public class Rcp {
                 }
                 switch (select1) {
                     case 1:
-                        Game g = new Game();
+                        Game.game();
                         break;
                     case 2:
                         Data d = new Data();

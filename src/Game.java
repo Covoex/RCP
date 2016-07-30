@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 
 class Game {
-    Game() {
+    static void game() {
         Scanner sc = new Scanner(System.in);
         Loop1:
         while (true) {
@@ -24,7 +24,6 @@ class Game {
                 }
                 Calculator calc = new Calculator();
                 calc.judge(select1);
-                Loop2:
                 while (true) {
                     System.out.println("--Select--");
                     System.out.println("1.Resume");
