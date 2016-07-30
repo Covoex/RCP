@@ -13,13 +13,30 @@ import java.util.Scanner;
 public class Rcp {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("*****Welcome to the RCP game.*****");
+        System.out.println("RRRRRRRRRRRRRRRRR           CCCCCCCCCCCCCPPPPPPPPPPPPPPPPP");
+        System.out.println("R::::::::::::::::R       CCC::::::::::::CP::::::::::::::::P");
+        System.out.println("R::::::RRRRRR:::::R    CC:::::::::::::::CP::::::PPPPPP:::::P");
+        System.out.println("RR:::::R     R:::::R  C:::::CCCCCCCC::::CPP:::::P     P:::::P");
+        System.out.println("R::::R     R:::::R C:::::C       CCCCCC  P::::P     P:::::P");
+        System.out.println("R::::R     R:::::RC:::::C                P::::P     P:::::P");
+        System.out.println("R::::RRRRRR:::::R C:::::C                P::::PPPPPP:::::P");
+        System.out.println("R:::::::::::::RR  C:::::C                P:::::::::::::PP");
+        System.out.println("R::::RRRRRR:::::R C:::::C                P::::PPPPPPPPP");
+        System.out.println(" R::::R     R:::::RC:::::C                P::::P");
+        System.out.println("R::::R     R:::::RC:::::C                P::::P)");
+        System.out.println(" R::::R     R:::::R C:::::C       CCCCCC  P::::P");
+        System.out.println("RR:::::R     R:::::R  C:::::CCCCCCCC::::CPP::::::PP");
+        System.out.println(" R::::::R     R:::::R   CC:::::::::::::::CP::::::::P");
+        System.out.println(" R::::::R     R:::::R     CCC::::::::::::CP::::::::P");
+        System.out.println(" RRRRRRRR     RRRRRRR        CCCCCCCCCCCCCPPPPPPPPPP");
+        System.out.println();
+        System.out.println("RCP game is a Rock Scissors Paper game.");
+        System.out.println();
         while (true) {
             try {
                 System.out.println("--Select--");
-                System.out.println("1.Start Game");
-                System.out.println("2.View Result");
-                System.out.println("3.End Game");
+                System.out.println("[1] Start Game");
+                System.out.println("[2] End Game");
                 System.out.print(">");
                 int select1 = sc.nextInt();
                 sc.nextLine();
@@ -33,10 +50,6 @@ public class Rcp {
                         Game.game();
                         break;
                     case 2:
-                        Data d = new Data();
-                        d.show();
-                        break;
-                    case 3:
                         return;
                 }
             } catch (Exception e) {

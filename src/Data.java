@@ -7,6 +7,14 @@ class Data {
     private static int USERWIN;
     private static int DRAW;
 
+    static void show() {
+        System.out.println();
+        System.out.println("[Statistics]");
+        System.out.println("Win: " + USERWIN);
+        System.out.println("Lose: " + COMPUTERWIN);
+        System.out.println("Draw: " + DRAW);
+    }
+
     void input(Winner win) {
         switch (win) {
             case USER:
@@ -19,11 +27,5 @@ class Data {
                 ++DRAW;
                 break;
         }
-    }
-
-    void show() {
-        System.out.println("Win: " + USERWIN);
-        System.out.println("Lose: " + COMPUTERWIN);
-        System.out.println("Draw: " + DRAW);
     }
 }
