@@ -1,5 +1,8 @@
+package com.rcp;
+
 /**
  * @author Hyunjae Lee
+ * @author Myeongjun Kim
  */
 
 class Data {

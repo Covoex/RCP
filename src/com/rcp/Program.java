@@ -1,18 +1,14 @@
-import java.util.Scanner;
+package com.rcp;
+
+import static com.rcp.Input.input;
 
 /**
- * RCP
- * Java Rock Scissor Paper Game.
- *
- * @author Hyunjae Lee
- *         <p>
- *         Version 1.0
- *         3/1/14 (D/M/Y)
+ * @author Myeongjun Kim
  */
 
-public class Rcp {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+class Program {
+
+    static void start() {
         System.out.println("RRRRRRRRRRRRRRRRR           CCCCCCCCCCCCCPPPPPPPPPPPPPPPPP");
         System.out.println("R::::::::::::::::R       CCC::::::::::::CP::::::::::::::::P");
         System.out.println("R::::::RRRRRR:::::R    CC:::::::::::::::CP::::::PPPPPP:::::P");
@@ -31,31 +27,13 @@ public class Rcp {
         System.out.println(" RRRRRRRR     RRRRRRR        CCCCCCCCCCCCCPPPPPPPPPP");
         System.out.println();
         System.out.println("RCP game is a Rock Scissors Paper game.");
-        System.out.println();
-        while (true) {
-            try {
-                System.out.println("--Select--");
-                System.out.println("[1] Start Game");
-                System.out.println("[2] End Game");
-                System.out.print(">");
-                int select1 = sc.nextInt();
-                sc.nextLine();
-                if (select1 < 0 || select1 > 3) {
-                    System.out.println("Wrong Select");
-                    System.out.println("Select Again");
+    }
 
-                }
-                switch (select1) {
-                    case 1:
-                        Game.game();
-                        break;
-                    case 2:
-                        return;
-                }
-            } catch (Exception e) {
-                System.out.println("Exception occurred");
-                break;
-            }
-        }
+    static void menu() {
+        System.out.println();
+        System.out.println("--Select--");
+        System.out.println("[1] Start game");
+        System.out.println("[2] End game");
+        input();
     }
 }

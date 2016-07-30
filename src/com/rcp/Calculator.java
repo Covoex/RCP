@@ -1,8 +1,12 @@
+package com.rcp;
+
 /**
  * @author Hyunjae Lee
+ * @author Myeongjun Kim
  */
 
 class Calculator {
+
     private int random() {
         return (int) (Math.random() * 3) + 1;
     }

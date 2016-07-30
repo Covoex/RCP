@@ -1,12 +1,14 @@
-import java.util.Scanner;
+package com.rcp;
+
+import static com.rcp.Rcp.sc;
 
 /**
  * @author Hyunjae Lee
+ * @author Myeongjun Kim
  */
 
 class Game {
     static void game() {
-        Scanner sc = new Scanner(System.in);
         Loop1:
         while (true) {
             try {
@@ -15,7 +17,7 @@ class Game {
                 System.out.println("[1] Rock");
                 System.out.println("[2] Scissor");
                 System.out.println("[3] Paper");
-                System.out.print(">");
+                System.out.print("> ");
                 int select1 = sc.nextInt();
                 sc.nextLine();
                 if (select1 < 0 || select1 > 3) {
@@ -29,8 +31,8 @@ class Game {
                     System.out.println();
                     System.out.println("--Select--");
                     System.out.println("[1] Continue");
-                    System.out.println("[2] Statistics");
-                    System.out.println("[3] End game");
+                    System.out.println("[2] End game");
+                    System.out.println("[3] Statistics");
                     System.out.print(">");
                     int select2 = sc.nextInt();
                     sc.nextLine();
@@ -43,10 +45,10 @@ class Game {
                         case 1:
                             continue Loop1;
                         case 2:
+                            return;
+                        case 3:
                             Data.show();
                             break;
-                        case 3:
-                            return;
                     }
                 }
             } catch (Exception e) {

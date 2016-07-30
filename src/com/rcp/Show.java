@@ -1,8 +1,11 @@
+package com.rcp;
+
 /**
  * @author Hyunjae Lee
  */
 
 class Show {
+
     String showHandType(int hand) {
         String handType = null;
         switch (hand) {
