@@ -8,23 +8,35 @@ import java.util.Scanner;
 
 class Input {
 
+    /**
+     * needs optimizing
+     */
     static void input() {
         Scanner sc = new Scanner(System.in);
         System.out.print("> ");
         int inputInt = 0;
         String inputString = sc.nextLine();
+        boolean yes = false;
 
-        if (inputString.isEmpty()) {
-            System.out.println();
-            System.out.println("Enter [1] or [2]");
-            input();
-        } else {
+        while (true) {
+            while (inputString.isEmpty() || yes) {
+                System.out.println();
+                System.out.println("Enter [1] or [2]");
+                System.out.print("> ");
+                inputString = sc.nextLine();
+                yes = false;
+            }
+
             try {
                 inputInt = Integer.parseInt(inputString);
             } catch (NumberFormatException e) {
-                System.out.println();
-                System.out.println("Enter [1] or [2]");
-                input();
+                yes = true;
+            }
+            if (inputInt < 1 || inputInt > 2) {
+                yes = true;
+            }
+            if (!yes) {
+                break;
             }
         }
 
