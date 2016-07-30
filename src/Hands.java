@@ -2,4 +2,6 @@
  * @author Hyunjae Lee
  */
 
-enum Hands {ROCK,SCISSOR,PAPER}
+enum Hands {
+    ROCK, SCISSOR, PAPER
+}

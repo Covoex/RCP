@@ -2,4 +2,6 @@
  * @author Hyunjae Lee
  */
 
-enum Winner {USER,COMPUTER,DRAW}
+enum Winner {
+    USER, COMPUTER, DRAW
+}
