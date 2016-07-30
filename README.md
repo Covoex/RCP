@@ -1,2 +1,2 @@
 # RCP
-Java Rock Scissors Paper Game.
+Rock Scissors Paper game made with java.
