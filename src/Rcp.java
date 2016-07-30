@@ -10,10 +10,10 @@ import java.util.Scanner;
  *         3/1/14 (D/M/Y)
  */
 
-public class RCP {
+public class Rcp {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("*****Welcome to the RCP Game*****");
+        System.out.println("*****Welcome to the RCP game.*****");
         while (true) {
             try {
                 System.out.println("--Select--");
@@ -33,8 +33,8 @@ public class RCP {
                         Game g = new Game();
                         break;
                     case 2:
-                        DATA d = new DATA();
-                        d.Show();
+                        Data d = new Data();
+                        d.show();
                         break;
                     case 3:
                         return;

@@ -2,14 +2,13 @@
  * @author Hyunjae Lee
  */
 
-class DATA {
+class Data {
     private static int COMPUTERWIN;
     private static int USERWIN;
     private static int DRAW;
 
-    public void Input(Winner win) {
-        Winner w = win;
-        switch (w) {
+    void input(Winner win) {
+        switch (win) {
             case USER:
                 ++USERWIN;
                 break;
@@ -22,7 +21,7 @@ class DATA {
         }
     }
 
-    public void Show() {
+    void show() {
         System.out.println("Win: " + USERWIN);
         System.out.println("Lose: " + COMPUTERWIN);
         System.out.println("Draw: " + DRAW);

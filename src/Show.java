@@ -3,20 +3,19 @@
  */
 
 class Show {
-    public String ShowHandType(int hand) {
-        String handtype = null;
-        int h = hand;
-        switch (h) {
+    String showHandType(int hand) {
+        String handType = null;
+        switch (hand) {
             case 1:
-                handtype = "Rock";
+                handType = "Rock";
                 break;
             case 2:
-                handtype = "Scissor";
+                handType = "Scissor";
                 break;
             case 3:
-                handtype = "Paper";
+                handType = "Paper";
                 break;
         }
-        return handtype;
+        return handType;
     }
 }

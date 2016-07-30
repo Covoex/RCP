@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 
 class Game {
-    public Game() {
+    Game() {
         Scanner sc = new Scanner(System.in);
         Loop1:
         while (true) {
@@ -23,12 +23,12 @@ class Game {
                     continue;
                 }
                 Calculator calc = new Calculator();
-                calc.Judge(select1);
+                calc.judge(select1);
                 Loop2:
                 while (true) {
                     System.out.println("--Select--");
                     System.out.println("1.Resume");
-                    System.out.println("2.Show Result");
+                    System.out.println("2.show Result");
                     System.out.println("3.Go Back");
                     System.out.print(">");
                     int select2 = sc.nextInt();
@@ -42,8 +42,8 @@ class Game {
                         case 1:
                             continue Loop1;
                         case 2:
-                            DATA d = new DATA();
-                            d.Show();
+                            Data d = new Data();
+                            d.show();
                             break;
                         case 3:
                             return;
