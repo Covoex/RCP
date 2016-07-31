@@ -3,8 +3,7 @@ package com.rcp;
 import java.util.Scanner;
 
 import static com.rcp.Function.*;
-import static com.rcp.Program.playMenu;
-import static com.rcp.Program.stopMenu;
+import static com.rcp.Program.*;
 
 /**
  * @author Myeongjun Kim
@@ -68,9 +67,9 @@ class Input {
     static void playInput() {
         int userHandType = checkInput(3);
         int computerHandType = getRandomHandType();
+        int result = userHandType - computerHandType;
         System.out.println("You: " + getStringHandType(userHandType));
         System.out.println("Computer: " + getStringHandType(computerHandType));
-        int result = userHandType - computerHandType;
         if (result == -1 || result == 2) {
             System.out.println("You Win!!");
             winCount++;
@@ -92,7 +91,7 @@ class Input {
             case 2:
                 return;
             case 3:
-                printStatistics();
+                statistics();
                 stopMenu();
         }
     }

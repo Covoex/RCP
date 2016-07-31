@@ -1,5 +1,6 @@
 package com.rcp;
 
+import static com.rcp.Function.*;
 import static com.rcp.Input.*;
 
 /**
@@ -52,5 +53,13 @@ class Program {
         System.out.println("[2] End game");
         System.out.println("[3] Statistics");
         stopInput();
+    }
+
+    static void statistics() {
+        System.out.println();
+        System.out.println("[Statistics]");
+        System.out.println("Win: " + winCount);
+        System.out.println("Lose: " + loseCount);
+        System.out.println("Draw: " + drawCount);
     }
 }

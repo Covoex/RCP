@@ -8,14 +8,6 @@ class Function {
     static int winCount;
     static int drawCount;
 
-    static void printStatistics() {
-        System.out.println();
-        System.out.println("[Statistics]");
-        System.out.println("Win: " + winCount);
-        System.out.println("Lose: " + loseCount);
-        System.out.println("Draw: " + drawCount);
-    }
-
     /**
      * @return get random number between [1, 3]
      */
