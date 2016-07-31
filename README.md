@@ -1,10 +1,8 @@
 # Rps
 Rock-paper-scissors game made with java.
 
-## Installation
-Download one of the [Releases](https://github.com/Covoex/Rps/releases).
-
-Run the program by
+## Running Rps
+Navigate to the project directory and run the program by
 
 On Mac & Linux
 ```
