@@ -1,7 +1,7 @@
-package com.rcp;
+package com.rsp;
 
-import static com.rcp.Function.*;
-import static com.rcp.Input.*;
+import static com.rsp.Function.*;
+import static com.rsp.Input.*;
 
 class Program {
 

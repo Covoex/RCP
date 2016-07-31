@@ -1,9 +1,9 @@
-package com.rcp;
+package com.rsp;
 
 import java.util.Scanner;
 
-import static com.rcp.Function.*;
-import static com.rcp.Program.*;
+import static com.rsp.Function.*;
+import static com.rsp.Program.*;
 
 class Input {
 
