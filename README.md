@@ -6,11 +6,11 @@ Download one of the [Releases](https://github.com/Covoex/Rps/releases).
 
 Run the program by
 
-[Mac & Linux]
+On Mac & Linux
 ```
 ./gradlew run
 ```
-[Windows]
+On Windows
 ```
 gradlew run
 ```
