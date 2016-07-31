@@ -2,6 +2,8 @@
 Rock-paper-scissors game made with java.
 
 ## Installation
+[Releases](https://github.com/Covoex/Rps/releases)
+
 In the project directory, you can run the program by 
 
 On Mac & Linux
