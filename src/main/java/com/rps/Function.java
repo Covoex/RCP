@@ -1,4 +1,4 @@
-package com.rsp;
+package com.rps;
 
 class Function {
     static int loseCount;

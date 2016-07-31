@@ -1,9 +1,9 @@
-package com.rsp;
+package com.rps;
 
 import java.util.Scanner;
 
-import static com.rsp.Function.*;
-import static com.rsp.Program.*;
+import static com.rps.Function.*;
+import static com.rps.Program.*;
 
 class Input {
 

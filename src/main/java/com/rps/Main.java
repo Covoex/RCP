@@ -1,7 +1,7 @@
-package com.rsp;
+package com.rps;
 
-import static com.rsp.Program.intro;
-import static com.rsp.Program.mainMenu;
+import static com.rps.Program.intro;
+import static com.rps.Program.mainMenu;
 
 class Main {
     public static void main(String args[]) {
