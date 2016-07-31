@@ -85,7 +85,7 @@ class Input {
                 playMenu();
                 break;
             case 2:
-                return;
+                break;
             case 3:
                 statistics();
                 stopMenu();
