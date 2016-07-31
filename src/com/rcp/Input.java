@@ -55,12 +55,8 @@ class Input {
     }
 
     static void menuInput() {
-        switch (checkInput(2)) {
-            case 1:
-                playMenu();
-                break;
-            case 2:
-                break;
+        if (checkInput(2) == 1) {
+            playMenu();
         }
     }
 
