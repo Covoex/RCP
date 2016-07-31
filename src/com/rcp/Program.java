@@ -1,14 +1,13 @@
 package com.rcp;
 
-import static com.rcp.Input.input;
+import static com.rcp.Input.*;
 
 /**
  * @author Myeongjun Kim
  */
-
 class Program {
 
-    static void start() {
+    static void intro() {
         System.out.println("RRRRRRRRRRRRRRRRR           CCCCCCCCCCCCCPPPPPPPPPPPPPPPPP");
         System.out.println("R::::::::::::::::R       CCC::::::::::::CP::::::::::::::::P");
         System.out.println("R::::::RRRRRR:::::R    CC:::::::::::::::CP::::::PPPPPP:::::P");
@@ -29,11 +28,29 @@ class Program {
         System.out.println("RCP game is a Rock Scissors Paper game.");
     }
 
-    static void menu() {
+    static void mainMenu() {
         System.out.println();
-        System.out.println("--Select--");
+        System.out.println("[Main Menu]");
         System.out.println("[1] Start game");
         System.out.println("[2] End game");
-        input();
+        menuInput();
+    }
+
+    static void playMenu() {
+        System.out.println();
+        System.out.println("[Play Menu]");
+        System.out.println("[1] Rock");
+        System.out.println("[2] Scissor");
+        System.out.println("[3] Paper");
+        playInput();
+    }
+
+    static void stopMenu() {
+        System.out.println();
+        System.out.println("[Stop Menu]");
+        System.out.println("[1] Continue");
+        System.out.println("[2] End game");
+        System.out.println("[3] Statistics");
+        stopInput();
     }
 }

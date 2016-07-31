@@ -2,16 +2,22 @@ package com.rcp;
 
 import java.util.Scanner;
 
+import static com.rcp.Function.*;
+import static com.rcp.Program.playMenu;
+import static com.rcp.Program.stopMenu;
+
 /**
  * @author Myeongjun Kim
  */
-
 class Input {
 
     /**
-     * needs optimizing
+     * didn't use try-catch because it can't know that the input is empty.
+     *
+     * @param inputNum number of selection user can make: [1, inputNum]
+     * @return the selected number
      */
-    static void input() {
+    private static int checkInput(int inputNum) {
         Scanner sc = new Scanner(System.in);
         System.out.print("> ");
         int inputInt = 0;
@@ -20,8 +26,15 @@ class Input {
 
         while (true) {
             while (inputString.isEmpty() || yes) {
+                String returnString = "Enter ";
                 System.out.println();
-                System.out.println("Enter [1] or [2]");
+                for (int i = 1; i <= inputNum; i++) {
+                    returnString += "[" + i + "]";
+                    if (i < inputNum) {
+                        returnString += " or ";
+                    }
+                }
+                System.out.println(returnString);
                 System.out.print("> ");
                 inputString = sc.nextLine();
                 yes = false;
@@ -32,20 +45,55 @@ class Input {
             } catch (NumberFormatException e) {
                 yes = true;
             }
-            if (inputInt < 1 || inputInt > 2) {
+            if (inputInt < 1 || inputInt > inputNum) {
                 yes = true;
             }
             if (!yes) {
                 break;
             }
         }
+        return inputInt;
+    }
 
-        switch (inputInt) {
+    static void menuInput() {
+        switch (checkInput(2)) {
             case 1:
-                Game.game();
+                playMenu();
                 break;
             case 2:
                 break;
+        }
+    }
+
+    static void playInput() {
+        int userHandType = checkInput(3);
+        int computerHandType = getRandomHandType();
+        System.out.println("You: " + getStringHandType(userHandType));
+        System.out.println("Computer: " + getStringHandType(computerHandType));
+        int result = userHandType - computerHandType;
+        if (result == -1 || result == 2) {
+            System.out.println("You Win!!");
+            winCount++;
+        } else if (result == 0) {
+            System.out.println("Draw;;");
+            drawCount++;
+        } else {
+            System.out.println("You Lose..");
+            loseCount++;
+        }
+        stopMenu();
+    }
+
+    static void stopInput() {
+        switch (checkInput(3)) {
+            case 1:
+                playMenu();
+                break;
+            case 2:
+                return;
+            case 3:
+                printStatistics();
+                stopMenu();
         }
     }
 }
