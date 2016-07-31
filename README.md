@@ -2,9 +2,9 @@
 Rock-paper-scissors game made with java.
 
 ## Installation
-1. Download one of the [Releases](https://github.com/Covoex/Rps/releases).
-2. Navigate to the program directory in the console.
-3. You can run the program by
+Download one of the [Releases](https://github.com/Covoex/Rps/releases).
+
+Run the program by
 On Mac & Linux
 ```
 ./gradlew run
