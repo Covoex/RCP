@@ -17,12 +17,3 @@ dependencies {
 run {
     standardInput = System.in
 }
-
-jar {
-    manifest {
-        attributes(
-                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'com.rps.Main'
-        )
-    }
-}
