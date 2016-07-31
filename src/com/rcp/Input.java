@@ -5,14 +5,9 @@ import java.util.Scanner;
 import static com.rcp.Function.*;
 import static com.rcp.Program.*;
 
-/**
- * @author Myeongjun Kim
- */
 class Input {
 
     /**
-     * didn't use try-catch because it can't know that the input is empty.
-     *
      * @param inputNum number of selection user can make: [1, inputNum]
      * @return the selected number
      */

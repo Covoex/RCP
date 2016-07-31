@@ -3,9 +3,6 @@ package com.rcp;
 import static com.rcp.Function.*;
 import static com.rcp.Input.*;
 
-/**
- * @author Myeongjun Kim
- */
 class Program {
 
     static void intro() {
