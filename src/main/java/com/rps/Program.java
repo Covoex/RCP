@@ -23,7 +23,7 @@ class Program {
         System.out.println("R::::::R     R:::::RP::::::::P          S:::::::::::::::SS");
         System.out.println("RRRRRRRR     RRRRRRRPPPPPPPPPP           SSSSSSSSSSSSSSS");
         System.out.println();
-        System.out.println("Rock Scissors Paper game made with java.");
+        System.out.println("Rock-paper-scissors game made with java.");
     }
 
     static void mainMenu() {
