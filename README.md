@@ -2,4 +2,4 @@
 Rock Scissors Paper game made with java.
 
 ## License
-See [LICENSE](https://github.com/Covoex/RCP/blob/master/LICENSE) file.
+See the [LICENSE](https://github.com/Covoex/RCP/blob/master/LICENSE) file.
