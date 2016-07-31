@@ -10,7 +10,6 @@ On Mac & Linux
 ```
 ./gradlew run
 ```
-
 On Windows
 ```
 gradlew run
