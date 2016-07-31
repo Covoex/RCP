@@ -1,5 +1,5 @@
-# Rsp
-Rock Scissors Paper game made with java.
+# Rps
+Rock-paper-scissors game made with java.
 
 ## Installation
 In the project directory, you can run the project by 
