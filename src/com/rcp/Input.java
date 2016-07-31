@@ -13,10 +13,11 @@ class Input {
      */
     private static int checkInput(int inputNum) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("> ");
         int inputInt = 0;
         String inputString = sc.nextLine();
         boolean yes = false;
+
+        System.out.print("> ");
 
         while (true) {
             while (inputString.isEmpty() || yes) {
@@ -39,9 +40,11 @@ class Input {
             } catch (NumberFormatException e) {
                 yes = true;
             }
+
             if (inputInt < 1 || inputInt > inputNum) {
                 yes = true;
             }
+
             if (!yes) {
                 break;
             }
@@ -57,10 +60,12 @@ class Input {
 
     static void playInput() {
         int userHandType = checkInput(3);
-        int computerHandType = getRandomHandType();
+        int computerHandType = (int) (Math.random() * 3) + 1;
         int result = userHandType - computerHandType;
+
         System.out.println("You: " + getStringHandType(userHandType));
         System.out.println("Computer: " + getStringHandType(computerHandType));
+
         if (result == -1 || result == 2) {
             System.out.println("You Win!!");
             winCount++;

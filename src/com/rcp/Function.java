@@ -5,13 +5,6 @@ class Function {
     static int winCount;
     static int drawCount;
 
-    /**
-     * @return random number between [1, 3].
-     */
-    static int getRandomHandType() {
-        return (int) (Math.random() * 3) + 1;
-    }
-    
     static String getStringHandType(int handType) {
         switch (handType) {
             case 1:
