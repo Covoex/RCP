@@ -9,7 +9,7 @@ import static com.rcp.Program.mainMenu;
  * @author Hyunjae Lee
  * @author Myeongjun Kim
  */
-class Rcp {
+class Main {
     public static void main(String args[]) {
         intro();
         mainMenu();

@@ -9,25 +9,25 @@ class Function {
     static int drawCount;
 
     /**
-     * @return get random number between [1, 3]
+     * @return get random number between [1, 3].
      */
     static int getRandomHandType() {
         return (int) (Math.random() * 3) + 1;
     }
 
+    /**
+     * @param handType number that represents a hand type.
+     * @return string hand type of hand type.
+     */
     static String getStringHandType(int handType) {
-        String stringHandType = null;
         switch (handType) {
             case 1:
-                stringHandType = "Rock";
-                break;
+                return "Rock";
             case 2:
-                stringHandType = "Scissor";
-                break;
+                return "Scissor";
             case 3:
-                stringHandType = "Paper";
-                break;
+                return "Paper";
         }
-        return stringHandType;
+        return "";
     }
 }
