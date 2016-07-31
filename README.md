@@ -5,6 +5,7 @@ Rock-paper-scissors game made with java.
 Download one of the [Releases](https://github.com/Covoex/Rps/releases).
 
 Run the program by
+
 On Mac & Linux
 ```
 ./gradlew run
