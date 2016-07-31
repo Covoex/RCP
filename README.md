@@ -3,8 +3,15 @@ Rock-paper-scissors game made with java.
 
 ## Installation
 In the project directory, you can run the project by 
+
+On Mac & Linu
 ```
 ./gradlew run
+```
+
+On Windows
+```
+gradlew run
 ```
 
 ## License
