@@ -14,10 +14,9 @@ class Input {
     private static int checkInput(int inputNum) {
         Scanner sc = new Scanner(System.in);
         int inputInt = 0;
-        String inputString = sc.nextLine();
         boolean yes = false;
-
         System.out.print("> ");
+        String inputString = sc.nextLine();
 
         while (true) {
             while (inputString.isEmpty() || yes) {
