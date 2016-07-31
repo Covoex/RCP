@@ -26,7 +26,7 @@ class Program {
         System.out.println(" R::::::R     R:::::R     CCC::::::::::::CP::::::::P");
         System.out.println(" RRRRRRRR     RRRRRRR        CCCCCCCCCCCCCPPPPPPPPPP");
         System.out.println();
-        System.out.println("RCP is a Rock Scissors Paper game made with java.");
+        System.out.println("Rock Scissors Paper game made with java.");
     }
 
     static void mainMenu() {

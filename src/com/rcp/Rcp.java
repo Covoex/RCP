@@ -4,7 +4,7 @@ import static com.rcp.Program.intro;
 import static com.rcp.Program.mainMenu;
 
 /**
- * RCP is a Rock Scissors Paper game made with java.
+ * Rock Scissors Paper game made with java.
  *
  * @author Hyunjae Lee
  * @author Myeongjun Kim
