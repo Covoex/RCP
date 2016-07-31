@@ -6,22 +6,22 @@ import static com.rps.Input.*;
 class Program {
 
     static void intro() {
-        System.out.println("RRRRRRRRRRRRRRRRR           CCCCCCCCCCCCCPPPPPPPPPPPPPPPPP");
-        System.out.println("R::::::::::::::::R       CCC::::::::::::CP::::::::::::::::P");
-        System.out.println("R::::::RRRRRR:::::R    CC:::::::::::::::CP::::::PPPPPP:::::P");
-        System.out.println("RR:::::R     R:::::R  C:::::CCCCCCCC::::CPP:::::P     P:::::P");
-        System.out.println("R::::R     R:::::R C:::::C       CCCCCC  P::::P     P:::::P");
-        System.out.println("R::::R     R:::::RC:::::C                P::::P     P:::::P");
-        System.out.println("R::::RRRRRR:::::R C:::::C                P::::PPPPPP:::::P");
-        System.out.println("R:::::::::::::RR  C:::::C                P:::::::::::::PP");
-        System.out.println("R::::RRRRRR:::::R C:::::C                P::::PPPPPPPPP");
-        System.out.println(" R::::R     R:::::RC:::::C                P::::P");
-        System.out.println("R::::R     R:::::RC:::::C                P::::P)");
-        System.out.println(" R::::R     R:::::R C:::::C       CCCCCC  P::::P");
-        System.out.println("RR:::::R     R:::::R  C:::::CCCCCCCC::::CPP::::::PP");
-        System.out.println(" R::::::R     R:::::R   CC:::::::::::::::CP::::::::P");
-        System.out.println(" R::::::R     R:::::R     CCC::::::::::::CP::::::::P");
-        System.out.println(" RRRRRRRR     RRRRRRR        CCCCCCCCCCCCCPPPPPPPPPP");
+        System.out.println("RRRRRRRRRRRRRRRRR   PPPPPPPPPPPPPPPPP      SSSSSSSSSSSSSSS");
+        System.out.println("R::::::::::::::::R  P::::::::::::::::P   SS:::::::::::::::S");
+        System.out.println("R::::::RRRRRR:::::R P::::::PPPPPP:::::P S:::::SSSSSS::::::S");
+        System.out.println(" RR:::::R     R:::::RPP:::::P     P:::::PS:::::S     SSSSSSS");
+        System.out.println("  R::::R     R:::::R  P::::P     P:::::PS:::::S");
+        System.out.println(" R::::R     R:::::R  P::::P     P:::::PS:::::S");
+        System.out.println("  R::::RRRRRR:::::R   P::::PPPPPP:::::P  S::::SSSS");
+        System.out.println(" R:::::::::::::RR    P:::::::::::::PP    SS::::::SSSSS");
+        System.out.println("  R::::RRRRRR:::::R   P::::PPPPPPPPP        SSS::::::::SS");
+        System.out.println("  R::::R     R:::::R  P::::P                   SSSSSS::::S");
+        System.out.println("   R::::R     R:::::R  P::::P                        S:::::S");
+        System.out.println("R::::R     R:::::R  P::::P                        S:::::S");
+        System.out.println("RR:::::R     R:::::RPP::::::PP          SSSSSSS     S:::::S");
+        System.out.println(" R::::::R     R:::::RP::::::::P          S::::::SSSSSS:::::S");
+        System.out.println("R::::::R     R:::::RP::::::::P          S:::::::::::::::SS");
+        System.out.println("RRRRRRRR     RRRRRRRPPPPPPPPPP           SSSSSSSSSSSSSSS");
         System.out.println();
         System.out.println("Rock Scissors Paper game made with java.");
     }
