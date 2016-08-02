@@ -1,5 +1,5 @@
 # Rps
-Rock-paper-scissors game made with java & javaFX.
+Rock-paper-scissors game made with FXML-based javaFX.
 
 ## Running Rps
 Navigate to the project directory and run the program by
