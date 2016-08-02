@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" vgap="10"
+          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.container">
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+    <Button fx:id="startBtn" onAction="#chooseMenu" text="Start game" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Button fx:id="endBtn" onAction="#endGame" text="End game" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+    <Label text="Rock-Paper-Scissors">
+        <font>
+            <Font size="34.0"/>
+        </font>
+    </Label>
+</GridPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" vgap="10"
+          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.container">
+    <Label text="Choose">
+        <font>
+            <Font size="34.0"/>
+        </font>
+    </Label>
+    <Button fx:id="rockBtn" onAction="#rock" text="Rock" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Button fx:id="paperBtn" onAction="#paper" text="Paper" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+    <Button fx:id="scissorsBtn" onAction="#scissors" mnemonicParsing="false" text="Scissors" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+    <Button fx:id="backBtn" mnemonicParsing="false" text="Go Back" GridPane.halignment="CENTER" GridPane.rowIndex="4"
+            onAction="#mainMenu">
+        <GridPane.margin>
+            <Insets bottom="10.0" top="10.0"/>
+        </GridPane.margin>
+    </Button>
+</GridPane>
