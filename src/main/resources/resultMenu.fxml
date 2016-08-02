@@ -3,7 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<GridPane alignment="center" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rps.container">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10.0" vgap="10.0"
+          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.container">
     <Label text="Result" GridPane.columnSpan="2" GridPane.halignment="CENTER">
         <font>
             <Font size="34.0" />

@@ -28,7 +28,7 @@ public class container {
     @FXML private TextField statisticsTextField;
 
     public void mainMenu(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/mainMenu.fxml"));
         Stage stage = (Stage) backBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
@@ -38,14 +38,14 @@ public class container {
         winCount = 0;
         loseCount = 0;
         drawCount = 0;
-        Parent root = FXMLLoader.load(getClass().getResource("chooseMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/chooseMenu.fxml"));
         Stage stage = (Stage) startBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
     }
 
     public void chooseMenuBack(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("chooseMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/chooseMenu.fxml"));
         Stage stage = (Stage) continueBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
@@ -62,7 +62,7 @@ public class container {
     }
 
     public void rock(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resultMenu.fxml"));
         Parent root = loader.load();
         container container = loader.getController();
         container.playInput(1);
@@ -70,7 +70,7 @@ public class container {
     }
 
     public void paper(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resultMenu.fxml"));
         Parent root = loader.load();
         container container = loader.getController();
         container.playInput(3);
@@ -78,7 +78,7 @@ public class container {
     }
 
     public void scissors(ActionEvent event) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resultMenu.fxml"));
         Parent root = loader.load();
         container container = loader.getController();
         container.playInput(2);
