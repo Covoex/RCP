@@ -1,14 +1,13 @@
 # Rps
 Rock-paper-scissors game made with java.
 
-## Installation
-In the project directory, you can run the program by 
+## Running Rps
+Navigate to the project directory and run the program by
 
 On Mac & Linux
 ```
 ./gradlew run
 ```
-
 On Windows
 ```
 gradlew run
