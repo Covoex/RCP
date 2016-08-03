@@ -3,25 +3,29 @@
 }
 
 .label {
-    -fx-text-fill: #CFD8DC;
+    -fx-text-fill: #ECEFF1;
     -fx-font-size: 15pt;
 }
 
-#resultText {
+#resultMenuLabel {
+    -fx-font-size: 30pt;
+}
+
+#chooseMenuLabel {
     -fx-font-size: 30pt;
 }
 
 .button {
     -fx-background-color: #607D8B;
     -fx-font-size: 16pt;
-    -fx-text-fill: #d8d8d8;
+    -fx-text-fill: #ECEFF1;
 }
 
 .button:hover {
-    -fx-background-color: #263238;
+    -fx-background-color: #455A64;
 }
 
 .button:pressed, .button:default:hover:pressed {
-  -fx-background-color: #000000;
-  -fx-text-fill: #263238;
+  -fx-background-color: #ECEFF1;
+  -fx-text-fill: #607D8B;
 }

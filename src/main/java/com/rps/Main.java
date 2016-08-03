@@ -19,8 +19,8 @@ public class Main extends Application {
         primaryStage.setTitle("Rps");
         primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.getIcons().add(new Image("/images/icon.png"));
-        primaryStage.setMinHeight(500);
         primaryStage.setMinWidth(600);
+        primaryStage.setMinHeight(500);
         primaryStage.show();
     }
 }

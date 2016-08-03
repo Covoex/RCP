@@ -7,21 +7,29 @@
 <GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10.0" stylesheets="@../styles/main.css"
           vgap="10.0" xmlns="http://javafx.com/javafx/8.0.102-ea"
           fx:controller="com.rps.Container">
-    <Label fx:id="resultText" text="Result" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+    <Label fx:id="resultMenuLabel" text="Result" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+
     <Label text="You" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+
     <Label text="Computer" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+
     <ImageView fx:id="userImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
                GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+
     <ImageView fx:id="computerImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
                GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+
     <Label fx:id="resultLabel" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+
     <Label fx:id="statisticsLabel" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4"/>
+
     <Button fx:id="continueBtn" mnemonicParsing="false" onAction="#chooseMenuBack" text="Continue"
             GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
         <GridPane.margin>
             <Insets bottom="2.0"/>
         </GridPane.margin>
     </Button>
+
     <Button fx:id="endBtnBack" mnemonicParsing="false" onAction="#endBtnBack" text="End Game" GridPane.columnSpan="2"
             GridPane.halignment="CENTER" GridPane.rowIndex="6">
         <GridPane.margin>

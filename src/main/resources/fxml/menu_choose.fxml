@@ -4,35 +4,40 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/main.css" alignment="center" hgap="50.0" vgap="10"
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" stylesheets="@../styles/main.css" vgap="10"
           xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.Container">
-    <Label text="Choose" GridPane.halignment="CENTER"/>
+    <Label fx:id="chooseMenuLabel" text="Choose" GridPane.columnSpan="3" GridPane.halignment="CENTER" />
+
     <Button fx:id="rockBtn" onAction="#rock" GridPane.halignment="CENTER" GridPane.rowIndex="1">
         <graphic>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="/images/rock.png" smooth="false"/>
+                <Image smooth="false" url="/images/rock.png"/>
             </ImageView>
         </graphic>
     </Button>
-    <Button fx:id="paperBtn" onAction="#paper" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+
+    <Button fx:id="scissorsBtn" mnemonicParsing="false" onAction="#scissors" GridPane.columnIndex="2"
+            GridPane.halignment="CENTER" GridPane.rowIndex="1">
         <graphic>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="/images/paper.png" smooth="false"/>
+                <Image smooth="false" url="/images/scissors.png"/>
             </ImageView>
         </graphic>
     </Button>
-    <Button fx:id="scissorsBtn" onAction="#scissors" mnemonicParsing="false"
-            GridPane.halignment="CENTER" GridPane.rowIndex="3">
+
+    <Button fx:id="paperBtn" onAction="#paper" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+            GridPane.rowIndex="1">
         <graphic>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="/images/scissors.png" smooth="false"/>
+                <Image smooth="false" url="/images/paper.png"/>
             </ImageView>
         </graphic>
     </Button>
-    <Button fx:id="backBtn" mnemonicParsing="false" text="Go Back" GridPane.halignment="CENTER" GridPane.rowIndex="4"
-            onAction="#mainMenu">
+
+    <Button fx:id="backBtn" mnemonicParsing="false" onAction="#mainMenu" text="Go Back" GridPane.columnSpan="3"
+            GridPane.halignment="CENTER" GridPane.rowIndex="2">
         <GridPane.margin>
-            <Insets bottom="10.0" top="10.0"/>
+            <Insets top="10.0"/>
         </GridPane.margin>
     </Button>
 </GridPane>
