@@ -17,10 +17,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
         primaryStage.setTitle("Rps");
-        primaryStage.setScene(new Scene(root, 500, 400));
+        primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.getIcons().add(new Image("/icon/icon.png"));
-        primaryStage.setMinHeight(400);
-        primaryStage.setMinWidth(500);
+        primaryStage.setMinHeight(500);
+        primaryStage.setMinWidth(600);
         primaryStage.show();
     }
 }

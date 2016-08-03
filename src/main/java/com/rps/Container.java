@@ -9,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class Container {
@@ -36,7 +38,7 @@ public class Container {
     public void mainMenu(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
         Stage stage = (Stage) backBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, 500, 400));
+        stage.setScene(new Scene(root, 600, 500));
         stage.show();
     }
 
@@ -46,14 +48,14 @@ public class Container {
         drawCount = 0;
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
         Stage stage = (Stage) startBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, 500, 500));
+        stage.setScene(new Scene(root, 600, 500));
         stage.show();
     }
 
     public void chooseMenuBack(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
         Stage stage = (Stage) continueBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, 500, 500));
+        stage.setScene(new Scene(root, 600, 500));
         stage.show();
     }
 
@@ -114,14 +116,23 @@ public class Container {
         computerImage.setImage(getImageHandType(computerHandType));
         if (result == -1 || result == 2) {
             resultLabel.setText("You Win!!");
+            Media sound = new Media(this.getClass().getResource("/audio/win.wav").toExternalForm());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
             winCount++;
             statistics();
         } else if (result == 0) {
             resultLabel.setText("Draw;;");
+            Media sound = new Media(this.getClass().getResource("/audio/draw.wav").toExternalForm());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
             drawCount++;
             statistics();
         } else {
             resultLabel.setText("You Lose..");
+            Media sound = new Media(this.getClass().getResource("/audio/lose.wav").toExternalForm());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
             loseCount++;
             statistics();
         }

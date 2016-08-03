@@ -3,24 +3,41 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" stylesheets="@../style/Theme.css"
-          vgap="10" xmlns="http://javafx.com/javafx/8.0.102-ea"
-          fx:controller="com.rps.Container">
-    <Button fx:id="startBtn" defaultButton="true" onAction="#chooseMenu" text="Start game" GridPane.halignment="CENTER"
-            GridPane.rowIndex="1">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" stylesheets="@../style/Theme.css" vgap="10"
+          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.Container">
+    <ImageView fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+        <Image smooth="false" url="/icon/icon.png"/>
         <GridPane.margin>
-            <Insets bottom="2.0" top="2.0"/>
+            <Insets/>
         </GridPane.margin>
-    </Button>
-    <Button fx:id="endBtn" onAction="#endGame" text="End game" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+    </ImageView>
+    <Label text="Rps is a Rock-Paper-Scissors game made with javaFX" GridPane.rowIndex="1">
         <GridPane.margin>
-            <Insets bottom="2.0" top="2.0"/>
-        </GridPane.margin>
-    </Button>
-    <Label text="Rock-Paper-Scissors">
-        <GridPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            <Insets bottom="50.0"/>
         </GridPane.margin>
     </Label>
+    <Button fx:id="startBtn" defaultButton="true" onAction="#chooseMenu" text="Start game" GridPane.halignment="CENTER"
+            GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets bottom="2.0" top="2.0"/>
+        </GridPane.margin>
+    </Button>
+    <Button fx:id="endBtn" onAction="#endGame" text="End game" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+        <GridPane.margin>
+            <Insets bottom="2.0" top="2.0"/>
+        </GridPane.margin>
+    </Button>
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+
 </GridPane>
