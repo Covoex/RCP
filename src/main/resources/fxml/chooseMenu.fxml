@@ -10,14 +10,14 @@
     <Button fx:id="rockBtn" onAction="#rock" GridPane.halignment="CENTER" GridPane.rowIndex="1">
         <graphic>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="/icon/rock.png" smooth="false"/>
+                <Image url="/images/rock.png" smooth="false"/>
             </ImageView>
         </graphic>
     </Button>
     <Button fx:id="paperBtn" onAction="#paper" GridPane.halignment="CENTER" GridPane.rowIndex="2">
         <graphic>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="/icon/paper.png" smooth="false"/>
+                <Image url="/images/paper.png" smooth="false"/>
             </ImageView>
         </graphic>
     </Button>
@@ -25,7 +25,7 @@
             GridPane.halignment="CENTER" GridPane.rowIndex="3">
         <graphic>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="/icon/scissors.png" smooth="false"/>
+                <Image url="/images/scissors.png" smooth="false"/>
             </ImageView>
         </graphic>
     </Button>

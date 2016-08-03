@@ -96,11 +96,11 @@ public class Container {
     private Image getImageHandType(int handType) {
         switch(handType) {
             case 1:
-                return new Image("/icon/rock.png");
+                return new Image("/images/rock.png");
             case 2:
-                return new Image("/icon/scissors.png");
+                return new Image("/images/scissors.png");
             case 3:
-                return new Image("/icon/paper.png");
+                return new Image("/images/paper.png");
         }
         return new Image("");
     }
@@ -116,21 +116,21 @@ public class Container {
         computerImage.setImage(getImageHandType(computerHandType));
         if (result == -1 || result == 2) {
             resultLabel.setText("You Win!!");
-            Media sound = new Media(this.getClass().getResource("/audio/win.wav").toExternalForm());
+            Media sound = new Media(this.getClass().getResource("/sound/win.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             winCount++;
             statistics();
         } else if (result == 0) {
             resultLabel.setText("Draw;;");
-            Media sound = new Media(this.getClass().getResource("/audio/draw.wav").toExternalForm());
+            Media sound = new Media(this.getClass().getResource("/sound/draw.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             drawCount++;
             statistics();
         } else {
             resultLabel.setText("You Lose..");
-            Media sound = new Media(this.getClass().getResource("/audio/lose.wav").toExternalForm());
+            Media sound = new Media(this.getClass().getResource("/sound/lose.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             loseCount++;

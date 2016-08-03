@@ -18,7 +18,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
         primaryStage.setTitle("Rps");
         primaryStage.setScene(new Scene(root, 600, 500));
-        primaryStage.getIcons().add(new Image("/icon/icon.png"));
+        primaryStage.getIcons().add(new Image("/images/icon.png"));
         primaryStage.setMinHeight(500);
         primaryStage.setMinWidth(600);
         primaryStage.show();
