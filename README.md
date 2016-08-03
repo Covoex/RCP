@@ -1,5 +1,5 @@
 # Rps
-Rock-paper-scissors game made with FXML-based javaFX.
+Rock-paper-scissors game made with javaFX.
 
 ![](http://i.imgur.com/0grkHhq.png)
 
