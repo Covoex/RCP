@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -16,7 +17,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
         primaryStage.setTitle("Rps");
-        primaryStage.setScene(new Scene(root, 400, 300));
+        primaryStage.setScene(new Scene(root, 500, 400));
+        primaryStage.getIcons().add(new Image("/icon/icon.png"));
+        primaryStage.setMinHeight(400);
+        primaryStage.setMinWidth(500);
         primaryStage.show();
     }
 }

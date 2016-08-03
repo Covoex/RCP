@@ -1,5 +1,14 @@
-.background {
+.root {
     -fx-background-color: #263238;
+}
+
+.label {
+    -fx-text-fill: #CFD8DC;
+    -fx-font-size: 20pt;
+}
+
+#resultText {
+    -fx-font-size: 30pt;
 }
 
 .button {

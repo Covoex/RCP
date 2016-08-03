@@ -6,7 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class Container {
@@ -19,18 +21,22 @@ public class Container {
     @FXML private Button backBtn;
     @FXML private Button continueBtn;
     @FXML private Button endBtnBack;
-    @FXML private TextField userStringHandType;
-    @FXML private TextField computerStringHandType;
-    @FXML private TextField resultTextField;
+    @FXML
+    private ImageView userImage;
+    @FXML
+    private ImageView computerImage;
+    @FXML
+    private Label resultLabel;
     @FXML private Button rockBtn;
     @FXML private Button paperBtn;
     @FXML private Button scissorsBtn;
-    @FXML private TextField statisticsTextField;
+    @FXML
+    private Label statisticsLabel;
 
     public void mainMenu(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
         Stage stage = (Stage) backBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, 400, 300));
+        stage.setScene(new Scene(root, 500, 400));
         stage.show();
     }
 
@@ -40,14 +46,14 @@ public class Container {
         drawCount = 0;
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
         Stage stage = (Stage) startBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, 400, 300));
+        stage.setScene(new Scene(root, 500, 500));
         stage.show();
     }
 
     public void chooseMenuBack(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
         Stage stage = (Stage) continueBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, 400, 300));
+        stage.setScene(new Scene(root, 500, 500));
         stage.show();
     }
 
@@ -85,37 +91,37 @@ public class Container {
         scissorsBtn.getScene().setRoot(root);
     }
 
-    private String getStringHandType(int handType) {
+    private Image getImageHandType(int handType) {
         switch(handType) {
             case 1:
-                return "Rock";
+                return new Image("/icon/rock.png");
             case 2:
-                return "Scissors";
+                return new Image("/icon/scissors.png");
             case 3:
-                return "Paper";
+                return new Image("/icon/paper.png");
         }
-        return "";
+        return new Image("");
     }
     public void statistics() {
-        statisticsTextField.setText(
+        statisticsLabel.setText(
             "Win: " + winCount + " Draw: " + drawCount + " Lose: " + loseCount);
     }
 
     private void playInput(int userHandType) {
         int computerHandType = (int) (Math.random() * 3) + 1;
         int result = userHandType - computerHandType;
-        userStringHandType.setText(getStringHandType(userHandType));
-        computerStringHandType.setText(getStringHandType(computerHandType));
+        userImage.setImage(getImageHandType(userHandType));
+        computerImage.setImage(getImageHandType(computerHandType));
         if (result == -1 || result == 2) {
-            resultTextField.setText("You Win!!");
+            resultLabel.setText("You Win!!");
             winCount++;
             statistics();
         } else if (result == 0) {
-            resultTextField.setText("Draw;;");
+            resultLabel.setText("Draw;;");
             drawCount++;
             statistics();
         } else {
-            resultTextField.setText("You Lose..");
+            resultLabel.setText("You Lose..");
             loseCount++;
             statistics();
         }
