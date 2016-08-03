@@ -36,7 +36,7 @@ public class Container {
     private Label statisticsLabel;
 
     public void mainMenu(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu_main.fxml"));
         Stage stage = (Stage) backBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 600, 500));
         stage.show();
@@ -46,14 +46,14 @@ public class Container {
         winCount = 0;
         loseCount = 0;
         drawCount = 0;
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml"));
         Stage stage = (Stage) startBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 600, 500));
         stage.show();
     }
 
     public void chooseMenuBack(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml"));
         Stage stage = (Stage) continueBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 600, 500));
         stage.show();
@@ -70,7 +70,7 @@ public class Container {
     }
 
     public void rock(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
         Container container = loader.getController();
         container.playInput(1);
@@ -78,7 +78,7 @@ public class Container {
     }
 
     public void paper(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
         Container container = loader.getController();
         container.playInput(3);
@@ -86,7 +86,7 @@ public class Container {
     }
 
     public void scissors(ActionEvent event) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
         Container container = loader.getController();
         container.playInput(2);
@@ -116,21 +116,21 @@ public class Container {
         computerImage.setImage(getImageHandType(computerHandType));
         if (result == -1 || result == 2) {
             resultLabel.setText("You Win!!");
-            Media sound = new Media(this.getClass().getResource("/sound/win.wav").toExternalForm());
+            Media sound = new Media(this.getClass().getResource("/sounds/win.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             winCount++;
             statistics();
         } else if (result == 0) {
             resultLabel.setText("Draw;;");
-            Media sound = new Media(this.getClass().getResource("/sound/draw.wav").toExternalForm());
+            Media sound = new Media(this.getClass().getResource("/sounds/draw.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             drawCount++;
             statistics();
         } else {
             resultLabel.setText("You Lose..");
-            Media sound = new Media(this.getClass().getResource("/sound/lose.wav").toExternalForm());
+            Media sound = new Media(this.getClass().getResource("/sounds/lose.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             loseCount++;

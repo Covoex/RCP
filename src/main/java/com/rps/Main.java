@@ -15,7 +15,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu_main.fxml"));
         primaryStage.setTitle("Rps");
         primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.getIcons().add(new Image("/images/icon.png"));
