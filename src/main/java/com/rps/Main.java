@@ -14,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/mainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
         primaryStage.setTitle("Rps");
         primaryStage.setScene(new Scene(root, 400, 300));
         primaryStage.show();

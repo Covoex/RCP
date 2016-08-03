@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class container {
+public class Container {
     private static int loseCount;
     private static int winCount;
     private static int drawCount;
@@ -28,7 +28,7 @@ public class container {
     @FXML private TextField statisticsTextField;
 
     public void mainMenu(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/mainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainMenu.fxml"));
         Stage stage = (Stage) backBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
@@ -38,14 +38,14 @@ public class container {
         winCount = 0;
         loseCount = 0;
         drawCount = 0;
-        Parent root = FXMLLoader.load(getClass().getResource("/chooseMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
         Stage stage = (Stage) startBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
     }
 
     public void chooseMenuBack(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/chooseMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/chooseMenu.fxml"));
         Stage stage = (Stage) continueBtn.getScene().getWindow();
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
@@ -62,25 +62,25 @@ public class container {
     }
 
     public void rock(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resultMenu.fxml"));
         Parent root = loader.load();
-        container container = loader.getController();
+        Container container = loader.getController();
         container.playInput(1);
         rockBtn.getScene().setRoot(root);
     }
 
     public void paper(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resultMenu.fxml"));
         Parent root = loader.load();
-        container container = loader.getController();
+        Container container = loader.getController();
         container.playInput(3);
         paperBtn.getScene().setRoot(root);
     }
 
     public void scissors(ActionEvent event) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resultMenu.fxml"));
         Parent root = loader.load();
-        container container = loader.getController();
+        Container container = loader.getController();
         container.playInput(2);
         scissorsBtn.getScene().setRoot(root);
     }
