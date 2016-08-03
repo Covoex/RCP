@@ -1,7 +1,7 @@
 # Rps
 Rock-paper-scissors game made with FXML-based javaFX.
 
-![](http://i.imgur.com/HDnL2yt.png)
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/K6oME"><a href="//imgur.com/a/K6oME">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 ## Running Rps
 Navigate to the project directory and run the program by
