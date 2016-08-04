@@ -7,25 +7,27 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" stylesheets="@../styles/main.css" vgap="10"
-          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.Container">
+          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.MainMenuController">
     <ImageView fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
         <Image smooth="false" url="/images/icon.png"/>
     </ImageView>
-
     <Label text="Rps is a Rock-Paper-Scissors game made with javaFX" GridPane.rowIndex="1">
         <GridPane.margin>
             <Insets bottom="50.0"/>
         </GridPane.margin>
     </Label>
-
-    <Button fx:id="startBtn" defaultButton="true" onAction="#chooseMenu" text="Start game" GridPane.halignment="CENTER"
+    <Button defaultButton="true" onAction="#handleStartBtn" text="Start game" GridPane.halignment="CENTER"
             GridPane.rowIndex="2">
         <GridPane.margin>
             <Insets bottom="2.0"/>
         </GridPane.margin>
     </Button>
-
-    <Button fx:id="endBtn" onAction="#endGame" text="End game" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+    <Button onAction="#handleEndBtn" text="End game" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+        <GridPane.margin>
+            <Insets top="2.0"/>
+        </GridPane.margin>
+    </Button>
+    <Button onAction="#handleAboutBtn" text="About" GridPane.halignment="CENTER" GridPane.rowIndex="4">
         <GridPane.margin>
             <Insets top="2.0"/>
         </GridPane.margin>
