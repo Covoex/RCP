@@ -4,15 +4,27 @@
 
 .label {
     -fx-text-fill: #ECEFF1;
+    -fx-font-size: 30pt;
+}
+
+#descriptionLabel {
+    -fx-font-size: 15pt
+}
+
+#userHandTypeLabel {
+    -fx-font-size: 20pt
+}
+
+#computerHandTypeLabel {
+    -fx-font-size: 20pt;
+}
+
+#resultLabel {
+    -fx-font-size: 20pt;
+}
+
+#statisticsLabel {
     -fx-font-size: 15pt;
-}
-
-#resultMenuLabel {
-    -fx-font-size: 30pt;
-}
-
-#chooseMenuLabel {
-    -fx-font-size: 30pt;
 }
 
 .button {

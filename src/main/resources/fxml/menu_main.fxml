@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
@@ -11,11 +10,6 @@
     <ImageView fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
         <Image smooth="false" url="/images/icon.png"/>
     </ImageView>
-    <Label text="Rps is a Rock-Paper-Scissors game made with javaFX" GridPane.rowIndex="1">
-        <GridPane.margin>
-            <Insets bottom="50.0"/>
-        </GridPane.margin>
-    </Label>
     <Button defaultButton="true" onAction="#handleStartBtn" text="Start game" GridPane.halignment="CENTER"
             GridPane.rowIndex="2">
         <GridPane.margin>

@@ -8,8 +8,9 @@
           vgap="10.0" xmlns="http://javafx.com/javafx/8.0.102-ea"
           fx:controller="com.rps.controller.ResultMenuController">
     <Label text="Result" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
-    <Label text="You" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-    <Label text="Computer" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Label fx:id="userHandTypeLabel" text="You" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Label fx:id="computerHandTypeLabel" text="Computer" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+           GridPane.rowIndex="1"/>
     <ImageView fx:id="userImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
                GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
     <ImageView fx:id="computerImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
