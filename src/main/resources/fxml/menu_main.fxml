@@ -23,7 +23,7 @@
     </Button>
     <Button onAction="#handleAboutBtn" text="About" GridPane.halignment="CENTER" GridPane.rowIndex="4">
         <GridPane.margin>
-            <Insets top="2.0"/>
+            <Insets top="20.0"/>
         </GridPane.margin>
     </Button>
 </GridPane>
