@@ -4,7 +4,21 @@
 
 .label {
     -fx-text-fill: #ECEFF1;
-    -fx-font-size: 30pt;
+    -fx-font-size: 20pt;
+}
+
+.chart-pie-label {
+    -fx-fill: #ECEFF1;
+    -fx-font-size: 10pt;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: #ECEFF1;
+    -fx-fill: #8b4513;
+}
+
+.chart-legend {
+    -fx-background-color: #263238;
 }
 
 #descriptionLabel {

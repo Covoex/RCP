@@ -26,7 +26,7 @@ public class ChooseMenuController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
         ResultMenuController controller = loader.getController();
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setScene(new Scene(root, 900, 800));
         controller.playInput(1);
     }
 
@@ -35,7 +35,7 @@ public class ChooseMenuController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
         ResultMenuController controller = loader.getController();
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setScene(new Scene(root, 900, 800));
         controller.playInput(3);
     }
 
@@ -44,7 +44,7 @@ public class ChooseMenuController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
         ResultMenuController controller = loader.getController();
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setScene(new Scene(root, 900, 800));
         controller.playInput(2);
     }
 }

@@ -1,8 +1,12 @@
 package com.rps.controller;
 
 import com.rps.Function;
+import javafx.beans.binding.Bindings;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
@@ -14,18 +18,16 @@ import static com.rps.Main.primaryStage;
 
 public class ResultMenuController {
 
-
     @FXML
     public ImageView userImage;
-
     @FXML
     public ImageView computerImage;
-
     @FXML
     public Label resultLabel;
-
     @FXML
     public Label statisticsLabel;
+    @FXML
+    private PieChart pieChart;
 
     @FXML
     private void handleContinueBtn(ActionEvent event) throws Exception {
@@ -48,26 +50,33 @@ public class ResultMenuController {
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             Function.winCount++;
-            statistics();
         } else if (result == 0) {
             resultLabel.setText("Draw;;");
             Media sound = new Media(this.getClass().getResource("/sounds/draw.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             Function.drawCount++;
-            statistics();
         } else {
             resultLabel.setText("You Lose..");
             Media sound = new Media(this.getClass().getResource("/sounds/lose.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             loseCount++;
-            statistics();
         }
-    }
-    
-    void statistics() {
-        statisticsLabel.setText(
-                "Win: " + winCount + " Draw: " + drawCount + " Lose: " + loseCount);
+        ObservableList<PieChart.Data> pieChartData =
+                FXCollections.observableArrayList(
+                        new PieChart.Data("Win", winCount),
+                        new PieChart.Data("Draw", drawCount),
+                        new PieChart.Data("Lose", loseCount)
+                );
+        pieChart.setTitle("Statistics");
+        pieChart.setData(pieChartData);
+        pieChartData.forEach(data ->
+                data.nameProperty().bind(
+                        Bindings.concat(
+                                data.getName(), " ", (int) data.getPieValue()
+                        )
+                )
+        );
     }
 }
