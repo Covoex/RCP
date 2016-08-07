@@ -1,11 +1,9 @@
 # Rps
 Rock-paper-scissors game made with javaFX.
 
-![](http://i.imgur.com/LKxPnyG.png)
-
-![](http://i.imgur.com/yIym7qO.png)
-
-![](http://i.imgur.com/wnuokHT.png)
+![](http://i.imgur.com/m0SWDMg.png)
+![](http://i.imgur.com/U7Sw2of.png)
+![](http://i.imgur.com/GgH8ZTt.png)
 
 ## Running Rps
 Navigate to the project directory and run the program by
