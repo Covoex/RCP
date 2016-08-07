@@ -21,6 +21,10 @@
     -fx-background-color: #263238;
 }
 
+#navigateLabel {
+    -fx-font-size: 12pt;
+}
+
 #descriptionLabel {
     -fx-font-size: 15pt
 }
@@ -55,8 +59,14 @@
 
 .button {
     -fx-background-color: #607D8B;
-    -fx-font-size: 16pt;
+    -fx-font-size: 15pt;
     -fx-text-fill: #ECEFF1;
+    -fx-border-width: 1;
+}
+
+.button:focused {
+    -fx-border-color: #607D8B;
+    -fx-font-size: 16pt;
 }
 
 .button:hover {
@@ -64,6 +74,6 @@
 }
 
 .button:pressed, .button:default:hover:pressed {
-  -fx-background-color: #ECEFF1;
-  -fx-text-fill: #607D8B;
+    -fx-background-color: #ECEFF1;
+    -fx-text-fill: #607D8B;
 }
