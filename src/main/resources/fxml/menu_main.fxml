@@ -5,30 +5,24 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" stylesheets="@../styles/main.css" vgap="10"
-          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.MainMenuController">
-    <ImageView fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
-        <Image smooth="false" url="/images/icon.png"/>
-    </ImageView>
-    <Button defaultButton="true" onAction="#handleStartBtn" text="Start game" GridPane.halignment="CENTER"
-            GridPane.rowIndex="2">
-        <GridPane.margin>
-            <Insets bottom="2.0"/>
-        </GridPane.margin>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/main.css"
+           xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.MainMenuController">
+    <GridPane vgap="10" alignment="CENTER" GridPane.halignment="CENTER" StackPane.alignment="BOTTOM_CENTER">
+        <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Image smooth="false" url="/images/icon.png"/>
+        </ImageView>
+        <Button mnemonicParsing="false" onAction="#handleStartBtn" text="Start game" GridPane.halignment="CENTER"
+                GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#handleEndBtn" text="End game" GridPane.halignment="CENTER"
+                GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#handleSettingsBtn" text="Settings" GridPane.halignment="CENTER"
+                GridPane.rowIndex="4"/>
+    </GridPane>
+    <Button mnemonicParsing="false" onAction="#handleAboutBtn" text="About" GridPane.halignment="CENTER"
+            StackPane.alignment="BOTTOM_CENTER">
+        <StackPane.margin>
+            <Insets bottom="20.0"/>
+        </StackPane.margin>
     </Button>
-    <Button onAction="#handleEndBtn" text="End game" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-        <GridPane.margin>
-            <Insets top="2.0"/>
-        </GridPane.margin>
-    </Button>
-    <Button onAction="#handleSettingsBtn" text="Settings" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-        <GridPane.margin>
-            <Insets top="20.0"/>
-        </GridPane.margin>
-    </Button>
-    <Button onAction="#handleAboutBtn" text="About" GridPane.halignment="CENTER" GridPane.rowIndex="5">
-        <GridPane.margin>
-            <Insets top="20.0"/>
-        </GridPane.margin>
-    </Button>
-</GridPane>
+</StackPane>

@@ -5,10 +5,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" hgap="10.0" stylesheets="@../styles/main.css"
-          vgap="10.0" xmlns="http://javafx.com/javafx/8.0.102-ea"
-          fx:controller="com.rps.controller.ResultMenuController">
-    <Label text="Result" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" stylesheets="@../styles/main.css" vgap="10.0"
+          xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.ResultMenuController">
+    <Label text="Result" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+        <GridPane.margin>
+            <Insets top="20.0"/>
+        </GridPane.margin>
+    </Label>
     <Label fx:id="userHandTypeLabel" alignment="CENTER" prefWidth="300" text="You" GridPane.halignment="CENTER"
            GridPane.rowIndex="1"/>
     <Label fx:id="computerHandTypeLabel" alignment="CENTER" prefWidth="300" text="Computer" GridPane.columnIndex="1"
@@ -18,18 +21,13 @@
     <ImageView fx:id="computerImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
                GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
     <Label fx:id="resultLabel" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
-    <PieChart fx:id="pieChart" labelLineLength="10.0" GridPane.columnSpan="2" GridPane.halignment="LEFT"
-              GridPane.rowIndex="4"/>
+    <PieChart fx:id="pieChart" labelLineLength="10.0" GridPane.columnSpan="2" GridPane.rowIndex="4"/>
     <Button mnemonicParsing="false" onAction="#handleContinueBtn" text="Continue" GridPane.columnSpan="2"
-            GridPane.halignment="CENTER" GridPane.rowIndex="5">
+            GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS"/>
+    <Button alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#handleEndBtn" text="End Game"
+            GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
         <GridPane.margin>
-            <Insets bottom="2.0"/>
-        </GridPane.margin>
-    </Button>
-    <Button mnemonicParsing="false" onAction="#handleEndBtn" text="End Game" GridPane.columnSpan="2"
-            GridPane.halignment="CENTER" GridPane.rowIndex="6">
-        <GridPane.margin>
-            <Insets top="2.0"/>
+            <Insets bottom="20.0"/>
         </GridPane.margin>
     </Button>
 </GridPane>
