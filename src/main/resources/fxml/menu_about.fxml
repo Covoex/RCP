@@ -19,7 +19,8 @@
     </Label>
     <Label fx:id="contributor1Label" text="Myeongjun Kim" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
     <Label fx:id="contributor2Label" text="Hyunjae Lee" GridPane.halignment="CENTER" GridPane.rowIndex="4"/>
-    <Button mnemonicParsing="false" onAction="#handleAboutBackBtn" text="Go Back" GridPane.halignment="CENTER"
+    <Button onKeyPressed="#handleAboutBackBtnKey" mnemonicParsing="false" onAction="#handleAboutBackBtn" text="Go Back"
+            GridPane.halignment="CENTER"
             GridPane.rowIndex="5" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
         <GridPane.margin>
             <Insets bottom="20.0"/>

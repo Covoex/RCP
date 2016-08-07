@@ -6,27 +6,31 @@
 <?import javafx.scene.layout.*?>
 <StackPane xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/main.css"
            xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.ChooseMenuController">
+    <Label text="Choose" StackPane.alignment="TOP_CENTER">
+        <StackPane.margin>
+            <Insets top="20.0"/>
+        </StackPane.margin>
+    </Label>
     <GridPane alignment="CENTER" vgap="10">
-        <Label text="Choose" GridPane.columnSpan="3" GridPane.halignment="CENTER"
-               GridPane.valignment="TOP"/>
-        <Button mnemonicParsing="false" onAction="#handleRockBtn" GridPane.halignment="CENTER"
-                GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1">
+        <Button GridPane.halignment="RIGHT" mnemonicParsing="false" onAction="#handleRockBtn"
+                GridPane.hgrow="SOMETIMES">
             <graphic>
                 <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                     <Image smooth="false" url="/images/rock.png"/>
                 </ImageView>
             </graphic>
         </Button>
-        <Button mnemonicParsing="false" onAction="#handlePaperBtn" GridPane.columnIndex="1" GridPane.halignment="CENTER"
-                GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1">
+        <Button GridPane.halignment="CENTER" mnemonicParsing="false" onAction="#handlePaperBtn" GridPane.columnIndex="1"
+                GridPane.hgrow="SOMETIMES">
             <graphic>
                 <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                     <Image smooth="false" url="/images/paper.png"/>
                 </ImageView>
             </graphic>
         </Button>
-        <Button mnemonicParsing="false" onAction="#handleScissorsBtn" GridPane.columnIndex="2"
-                GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1">
+        <Button GridPane.halignment="LEFT" mnemonicParsing="false" onAction="#handleScissorsBtn"
+                GridPane.columnIndex="2"
+                GridPane.hgrow="SOMETIMES">
             <graphic>
                 <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                     <Image smooth="false" url="/images/scissors.png"/>
@@ -34,7 +38,8 @@
             </graphic>
         </Button>
     </GridPane>
-    <Button StackPane.alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#handleBackBtn" text="Go Back">
+    <Button onKeyPressed="#handleBackBtnKey" StackPane.alignment="BOTTOM_CENTER" mnemonicParsing="false"
+            onAction="#handleBackBtn" text="Go Back">
         <StackPane.margin>
             <Insets bottom="20.0"/>
         </StackPane.margin>

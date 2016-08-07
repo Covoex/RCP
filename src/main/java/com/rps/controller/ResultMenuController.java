@@ -3,11 +3,14 @@ package com.rps.controller;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
@@ -34,13 +37,25 @@ public class ResultMenuController {
     private PieChart pieChart;
 
     @FXML
-    private void handleContinueBtn(ActionEvent event) throws Exception {
+    private void handleContinueBtn() throws Exception {
+        primaryStage.setMinWidth(700);
+        primaryStage.setMinHeight(600);
+        chooseMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml")), 700, 600);
+        primaryStage.setHeight(600);
+        primaryStage.setWidth(700);
         showScene(chooseMenu);
     }
 
     @FXML
     private void handleEndBtn() {
         primaryStage.close();
+    }
+
+    @FXML
+    private void handleEndBtnKey(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            handleEndBtn();
+        }
     }
 
     void playInput(int userHandType) {
@@ -76,13 +91,12 @@ public class ResultMenuController {
                         new PieChart.Data("Draw", drawCount),
                         new PieChart.Data("Lose", loseCount)
                 );
-        pieChart.setTitle("Statistics");
         pieChart.setData(pieChartData);
         pieChartData.forEach(data ->
                 data.nameProperty().bind(
                         Bindings.concat(
                                 data.getName(), " ", (int) data.getPieValue()
-                        )
+                )
                 )
         );
     }

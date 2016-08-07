@@ -7,19 +7,22 @@
 <?import javafx.scene.layout.*?>
 <StackPane xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/main.css"
            xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.MainMenuController">
-    <GridPane vgap="10" alignment="CENTER" GridPane.halignment="CENTER" StackPane.alignment="BOTTOM_CENTER">
+    <GridPane vgap="10" alignment="CENTER">
         <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
-                   GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                   GridPane.halignment="CENTER">
             <Image smooth="false" url="/images/icon.png"/>
         </ImageView>
-        <Button mnemonicParsing="false" onAction="#handleStartBtn" text="Start game" GridPane.halignment="CENTER"
+        <Button mnemonicParsing="false" onKeyPressed="#handleStartBtnKey" onAction="#handleStartBtn" text="Start game"
+                GridPane.halignment="CENTER"
+                GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onKeyPressed="#handleEndBtnKey" onAction="#handleEndBtn" text="End game"
+                GridPane.halignment="CENTER"
                 GridPane.rowIndex="2"/>
-        <Button mnemonicParsing="false" onAction="#handleEndBtn" text="End game" GridPane.halignment="CENTER"
+        <Button mnemonicParsing="false" onKeyPressed="#handleSettingsBtnKey" onAction="#handleSettingsBtn"
+                text="Settings" GridPane.halignment="CENTER"
                 GridPane.rowIndex="3"/>
-        <Button mnemonicParsing="false" onAction="#handleSettingsBtn" text="Settings" GridPane.halignment="CENTER"
-                GridPane.rowIndex="4"/>
     </GridPane>
-    <Button mnemonicParsing="false" onAction="#handleAboutBtn" text="About" GridPane.halignment="CENTER"
+    <Button mnemonicParsing="false" onKeyPressed="#handleAboutBtnKey" onAction="#handleAboutBtn" text="About"
             StackPane.alignment="BOTTOM_CENTER">
         <StackPane.margin>
             <Insets bottom="20.0"/>

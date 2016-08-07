@@ -19,15 +19,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        aboutMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_about.fxml")), 600, 300);
-        mainMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_main.fxml")), 600, 500);
-        chooseMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml")), 600, 500);
-        settingsMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_settings.fxml")), 600, 300);
+        aboutMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_about.fxml")), 700, 600);
+        mainMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_main.fxml")), 700, 600);
+        chooseMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml")), 700, 600);
+        settingsMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_settings.fxml")), 700, 600);
         primaryStage.setTitle("Rps");
         primaryStage.setScene(mainMenu);
         primaryStage.getIcons().add(new Image("/images/icon.png"));
-        //primaryStage.setMinWidth(900);
-        //primaryStage.setMinHeight(800);
+        primaryStage.setMinWidth(700);
+        primaryStage.setMinHeight(600);
         primaryStage.show();
         Main.primaryStage = primaryStage;
     }
