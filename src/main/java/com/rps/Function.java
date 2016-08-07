@@ -24,6 +24,6 @@ public class Function {
             case 3:
                 return new Image("/images/paper.png");
         }
-        return new Image("/images/rock.png");
+        return null;
     }
 }

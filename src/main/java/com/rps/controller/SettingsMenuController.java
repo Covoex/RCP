@@ -8,8 +8,7 @@ import javafx.scene.image.ImageView;
 import static com.rps.Function.showScene;
 import static com.rps.Main.mainMenu;
 
-public class SettingsController {
-
+public class SettingsMenuController {
     static boolean soundValue = false;
 
     @FXML

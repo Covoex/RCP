@@ -14,20 +14,22 @@ import javafx.scene.media.MediaPlayer;
 import static com.rps.Function.*;
 import static com.rps.Main.chooseMenu;
 import static com.rps.Main.primaryStage;
-import static com.rps.controller.SettingsController.soundValue;
+import static com.rps.controller.SettingsMenuController.soundValue;
 
 public class ResultMenuController {
-    @FXML
-    public ImageView userImage;
+    private Media winSound = new Media(this.getClass().getResource("/sounds/win.wav").toExternalForm());
+    private Media drawSound = new Media(this.getClass().getResource("/sounds/draw.wav").toExternalForm());
+    private Media loseSound = new Media(this.getClass().getResource("/sounds/lose.wav").toExternalForm());
 
     @FXML
-    public ImageView computerImage;
+    private ImageView userImage;
 
     @FXML
-    public Label resultLabel;
-    Media winSound = new Media(this.getClass().getResource("/sounds/win.wav").toExternalForm());
-    Media drawSound = new Media(this.getClass().getResource("/sounds/draw.wav").toExternalForm());
-    Media loseSound = new Media(this.getClass().getResource("/sounds/lose.wav").toExternalForm());
+    private ImageView computerImage;
+
+    @FXML
+    private Label resultLabel;
+
     @FXML
     private PieChart pieChart;
 
@@ -56,14 +58,14 @@ public class ResultMenuController {
         } else if (result == 0) {
             resultLabel.setText("Draw;;");
             if (soundValue) {
-                MediaPlayer mediaPlayer = new MediaPlayer(winSound);
+                MediaPlayer mediaPlayer = new MediaPlayer(drawSound);
                 mediaPlayer.play();
             }
             drawCount++;
         } else {
             resultLabel.setText("You Lose..");
             if (soundValue) {
-                MediaPlayer mediaPlayer = new MediaPlayer(winSound);
+                MediaPlayer mediaPlayer = new MediaPlayer(loseSound);
                 mediaPlayer.play();
             }
             loseCount++;

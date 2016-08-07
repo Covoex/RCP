@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="50.0" stylesheets="@../styles/main.css"
           vgap="10" xmlns="http://javafx.com/javafx/8.0.102-ea"
-          fx:controller="com.rps.controller.SettingsController">
+          fx:controller="com.rps.controller.SettingsMenuController">
     <Label text="Settings" GridPane.halignment="CENTER"/>
     <Button mnemonicParsing="false" onAction="#handleSoundBtn" GridPane.halignment="CENTER"
             GridPane.rowIndex="1">
