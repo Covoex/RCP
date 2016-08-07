@@ -18,4 +18,4 @@ gradlew run
 ```
 
 ## License
-[MIT LICENSE](https://github.com/Covoex/RCP/blob/master/LICENSE).
+[MIT LICENSE](https://github.com/Covoex/RCP/blob/master/LICENSE)
