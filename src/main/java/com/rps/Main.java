@@ -11,6 +11,7 @@ public class Main extends Application {
     public static Scene aboutMenu;
     public static Scene mainMenu;
     public static Scene chooseMenu;
+    public static Scene settingsMenu;
 
     public static void main(String[] args) {
         launch(args);
@@ -21,6 +22,7 @@ public class Main extends Application {
         aboutMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_about.fxml")), 600, 500);
         mainMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_main.fxml")), 600, 500);
         chooseMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml")), 600, 500);
+        settingsMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_settings.fxml")), 600, 500);
         primaryStage.setTitle("Rps");
         primaryStage.setScene(mainMenu);
         primaryStage.getIcons().add(new Image("/images/icon.png"));

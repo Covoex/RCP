@@ -1,6 +1,5 @@
 package com.rps.controller;
 
-import com.rps.Function;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,17 +14,20 @@ import javafx.scene.media.MediaPlayer;
 import static com.rps.Function.*;
 import static com.rps.Main.chooseMenu;
 import static com.rps.Main.primaryStage;
+import static com.rps.controller.SettingsController.soundValue;
 
 public class ResultMenuController {
-
     @FXML
     public ImageView userImage;
+
     @FXML
     public ImageView computerImage;
+
     @FXML
     public Label resultLabel;
-    @FXML
-    public Label statisticsLabel;
+    Media winSound = new Media(this.getClass().getResource("/sounds/win.wav").toExternalForm());
+    Media drawSound = new Media(this.getClass().getResource("/sounds/draw.wav").toExternalForm());
+    Media loseSound = new Media(this.getClass().getResource("/sounds/lose.wav").toExternalForm());
     @FXML
     private PieChart pieChart;
 
@@ -46,21 +48,24 @@ public class ResultMenuController {
         computerImage.setImage(getImageHandType(computerHandType));
         if (result == -1 || result == 2) {
             resultLabel.setText("You Win!!");
-            Media sound = new Media(this.getClass().getResource("/sounds/win.wav").toExternalForm());
-            MediaPlayer mediaPlayer = new MediaPlayer(sound);
-            mediaPlayer.play();
-            Function.winCount++;
+            if (soundValue) {
+                MediaPlayer mediaPlayer = new MediaPlayer(winSound);
+                mediaPlayer.play();
+            }
+            winCount++;
         } else if (result == 0) {
             resultLabel.setText("Draw;;");
-            Media sound = new Media(this.getClass().getResource("/sounds/draw.wav").toExternalForm());
-            MediaPlayer mediaPlayer = new MediaPlayer(sound);
-            mediaPlayer.play();
-            Function.drawCount++;
+            if (soundValue) {
+                MediaPlayer mediaPlayer = new MediaPlayer(winSound);
+                mediaPlayer.play();
+            }
+            drawCount++;
         } else {
             resultLabel.setText("You Lose..");
-            Media sound = new Media(this.getClass().getResource("/sounds/lose.wav").toExternalForm());
-            MediaPlayer mediaPlayer = new MediaPlayer(sound);
-            mediaPlayer.play();
+            if (soundValue) {
+                MediaPlayer mediaPlayer = new MediaPlayer(winSound);
+                mediaPlayer.play();
+            }
             loseCount++;
         }
         ObservableList<PieChart.Data> pieChartData =

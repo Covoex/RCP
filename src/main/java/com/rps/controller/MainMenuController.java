@@ -19,6 +19,11 @@ public class MainMenuController {
     }
 
     @FXML
+    private void handleSettingsBtn() {
+        showScene(settingsMenu);
+    }
+
+    @FXML
     private void handleAboutBtn(ActionEvent event) throws Exception {
         showScene(aboutMenu);
     }

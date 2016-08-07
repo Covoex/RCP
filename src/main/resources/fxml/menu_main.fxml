@@ -21,7 +21,12 @@
             <Insets top="2.0"/>
         </GridPane.margin>
     </Button>
-    <Button onAction="#handleAboutBtn" text="About" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+    <Button onAction="#handleSettingsBtn" text="Settings" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+        <GridPane.margin>
+            <Insets top="20.0"/>
+        </GridPane.margin>
+    </Button>
+    <Button onAction="#handleAboutBtn" text="About" GridPane.halignment="CENTER" GridPane.rowIndex="5">
         <GridPane.margin>
             <Insets top="20.0"/>
         </GridPane.margin>
