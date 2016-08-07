@@ -18,6 +18,13 @@ public class ChooseMenuController {
     private void handleRockBtn() throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
+        if (SettingsMenuController.defaultTheme) {
+            root.getStylesheets().clear();
+            root.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
+        } else {
+            root.getStylesheets().clear();
+            root.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+        }
         ResultMenuController controller = loader.getController();
         primaryStage.setMinWidth(1000);
         primaryStage.setMinHeight(900);
@@ -29,6 +36,13 @@ public class ChooseMenuController {
     private void handlePaperBtn() throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
+        if (SettingsMenuController.defaultTheme) {
+            root.getStylesheets().clear();
+            root.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
+        } else {
+            root.getStylesheets().clear();
+            root.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+        }
         ResultMenuController controller = loader.getController();
         primaryStage.setMinWidth(1000);
         primaryStage.setMinHeight(900);
@@ -40,6 +54,13 @@ public class ChooseMenuController {
     private void handleScissorsBtn() throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu_result.fxml"));
         Parent root = loader.load();
+        if (SettingsMenuController.defaultTheme) {
+            root.getStylesheets().clear();
+            root.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
+        } else {
+            root.getStylesheets().clear();
+            root.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+        }
         ResultMenuController controller = loader.getController();
         primaryStage.setMinWidth(1000);
         primaryStage.setMinHeight(900);

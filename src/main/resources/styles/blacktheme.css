@@ -57,6 +57,10 @@
     -fx-font-size: 15pt;
 }
 
+.radio-button {
+    -fx-text-fill: #ECEFF1
+}
+
 .button {
     -fx-background-color: #607D8B;
     -fx-font-size: 15pt;

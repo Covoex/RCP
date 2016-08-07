@@ -7,13 +7,26 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 import static com.rps.Function.showScene;
-import static com.rps.Main.mainMenu;
+import static com.rps.Main.*;
 
 public class SettingsMenuController {
+    public static boolean defaultTheme = true;
     static boolean soundValue = false;
-
     @FXML
     private ImageView soundImage;
+
+    @FXML
+    private void handleThemeBtn() {
+        defaultTheme = false;
+        mainMenu.getStylesheets().clear();
+        chooseMenu.getStylesheets().clear();
+        settingsMenu.getStylesheets().clear();
+        aboutMenu.getStylesheets().clear();
+        mainMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+        chooseMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+        aboutMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+        settingsMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+    }
 
     @FXML
     private void handleBackBtn() {

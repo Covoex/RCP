@@ -4,8 +4,6 @@ import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -37,12 +35,7 @@ public class ResultMenuController {
     private PieChart pieChart;
 
     @FXML
-    private void handleContinueBtn() throws Exception {
-        primaryStage.setMinWidth(700);
-        primaryStage.setMinHeight(600);
-        chooseMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml")), 700, 600);
-        primaryStage.setHeight(600);
-        primaryStage.setWidth(700);
+    private void handleContinueBtn() {
         showScene(chooseMenu);
     }
 

@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" vgap="10" alignment="CENTER" stylesheets="@../styles/main.css"
+<GridPane xmlns:fx="http://javafx.com/fxml/1" vgap="10" alignment="CENTER"
           xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.AboutMenuController">
     <Label text="About" GridPane.halignment="CENTER">
         <GridPane.margin>

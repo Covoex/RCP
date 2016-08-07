@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<StackPane xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/main.css"
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
            xmlns="http://javafx.com/javafx/8.0.102-ea" fx:controller="com.rps.controller.ChooseMenuController">
     <Label text="Choose" StackPane.alignment="TOP_CENTER">
         <StackPane.margin>
