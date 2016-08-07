@@ -20,10 +20,12 @@ public class ChooseMenuController {
         Parent root = loader.load();
         if (SettingsMenuController.defaultTheme) {
             root.getStylesheets().clear();
-            root.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_black.css").toExternalForm());
         } else {
             root.getStylesheets().clear();
-            root.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_white.css").toExternalForm());
         }
         ResultMenuController controller = loader.getController();
         primaryStage.setMinWidth(1000);
@@ -38,10 +40,12 @@ public class ChooseMenuController {
         Parent root = loader.load();
         if (SettingsMenuController.defaultTheme) {
             root.getStylesheets().clear();
-            root.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_black.css").toExternalForm());
         } else {
             root.getStylesheets().clear();
-            root.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_white.css").toExternalForm());
         }
         ResultMenuController controller = loader.getController();
         primaryStage.setMinWidth(1000);
@@ -56,10 +60,12 @@ public class ChooseMenuController {
         Parent root = loader.load();
         if (SettingsMenuController.defaultTheme) {
             root.getStylesheets().clear();
-            root.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_black.css").toExternalForm());
         } else {
             root.getStylesheets().clear();
-            root.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+            root.getStylesheets().add(getClass().getResource("/styles/theme_white.css").toExternalForm());
         }
         ResultMenuController controller = loader.getController();
         primaryStage.setMinWidth(1000);

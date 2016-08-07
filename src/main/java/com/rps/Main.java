@@ -23,10 +23,14 @@ public class Main extends Application {
         mainMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_main.fxml")), 700, 600);
         chooseMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_choose.fxml")), 700, 600);
         settingsMenu = new Scene(FXMLLoader.load(getClass().getResource("/fxml/menu_settings.fxml")), 700, 600);
-        mainMenu.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
-        aboutMenu.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
-        chooseMenu.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
-        settingsMenu.getStylesheets().add(getClass().getResource("/styles/blacktheme.css").toExternalForm());
+        mainMenu.getStylesheets().add(getClass().getResource("/styles/theme_black.css").toExternalForm());
+        mainMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+        aboutMenu.getStylesheets().add(getClass().getResource("/styles/theme_black.css").toExternalForm());
+        aboutMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+        chooseMenu.getStylesheets().add(getClass().getResource("/styles/theme_black.css").toExternalForm());
+        chooseMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+        settingsMenu.getStylesheets().add(getClass().getResource("/styles/theme_black.css").toExternalForm());
+        settingsMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
         primaryStage.setTitle("Rps");
         primaryStage.setScene(mainMenu);
         primaryStage.getIcons().add(new Image("/images/icon.png"));

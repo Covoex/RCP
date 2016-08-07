@@ -22,10 +22,14 @@ public class SettingsMenuController {
         chooseMenu.getStylesheets().clear();
         settingsMenu.getStylesheets().clear();
         aboutMenu.getStylesheets().clear();
-        mainMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
-        chooseMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
-        aboutMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
-        settingsMenu.getStylesheets().add(getClass().getResource("/styles/whitetheme.css").toExternalForm());
+        mainMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+        chooseMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+        aboutMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+        settingsMenu.getStylesheets().add(getClass().getResource("/styles/theme_default.css").toExternalForm());
+        mainMenu.getStylesheets().add(getClass().getResource("/styles/theme_white.css").toExternalForm());
+        chooseMenu.getStylesheets().add(getClass().getResource("/styles/theme_white.css").toExternalForm());
+        aboutMenu.getStylesheets().add(getClass().getResource("/styles/theme_white.css").toExternalForm());
+        settingsMenu.getStylesheets().add(getClass().getResource("/styles/theme_white.css").toExternalForm());
     }
 
     @FXML
